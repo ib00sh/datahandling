@@ -5,4 +5,11 @@ package com.epam.datahandling.lexis;
  */
 public class Sentence {
 
+    private String sentence;
+    private Word[] words;
+
+    public Sentence(String sentence) {
+        throw new UnsupportedOperationException("Implement this method");
+    }
+
 }

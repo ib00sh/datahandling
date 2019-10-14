@@ -5,4 +5,11 @@ package com.epam.datahandling.lexis;
  */
 public class Word {
 
+    private String word;
+    private Character[] letters;
+
+    public Word(String word) {
+        throw new UnsupportedOperationException("Implement this method");
+    }
+
 }

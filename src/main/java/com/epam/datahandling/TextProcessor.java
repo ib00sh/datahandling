@@ -1,17 +1,13 @@
 package com.epam.datahandling;
 
-/**
- * Demo class demonstrating program capabilities of working with files, text parsing and displaying reports
- */
+import com.epam.datahandling.lexis.Text;
+
+import java.io.*;
+
 public class TextProcessor {
-    
-    public static void main(String[] args) {
-        TextProcessor textProcessor = new TextProcessor();
-        textProcessor.start();
+
+    public Text parse(File src) {
+        throw new UnsupportedOperationException("Implement this method");
     }
-    
-    private void start() {
-        
-    }
-    
+
 }
