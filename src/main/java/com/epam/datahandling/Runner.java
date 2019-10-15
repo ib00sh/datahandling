@@ -6,12 +6,7 @@ package com.epam.datahandling;
 public class Runner {
 
     public static void main(String[] args) {
-        Runner textProcessor = new Runner();
-        textProcessor.start();
-    }
-    
-    private void start() {
-
+        throw new UnsupportedOperationException("Implement this method");
     }
 
 }

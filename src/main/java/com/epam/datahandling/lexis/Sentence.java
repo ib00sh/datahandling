@@ -5,10 +5,18 @@ package com.epam.datahandling.lexis;
  */
 public class Sentence {
 
-    private String sentence;
+    private String content;
     private Word[] words;
 
-    public Sentence(String sentence) {
+    public Sentence(String content) {
+        throw new UnsupportedOperationException("Implement this method");
+    }
+
+    public String getContent() {
+        throw new UnsupportedOperationException("Implement this method");
+    }
+
+    public Word[] getWords() {
         throw new UnsupportedOperationException("Implement this method");
     }
 
