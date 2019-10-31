@@ -12,7 +12,6 @@ public class EntityParser {
     public static void parseText(Text text){
         Sentence[] result = new Sentence[]{};
         Matcher matcher = Pattern.compile("([a-zA-Z\\\\s]+[^.!?]*)").matcher(text.getContent());
-
         while (matcher.find()) {
             result = append(result, new Sentence(matcher.group(1)));
         }
@@ -21,9 +20,9 @@ public class EntityParser {
 
     public static void parseSentence(Sentence sentence){
         Word[] result = new Word[]{};
-        Matcher matcher = Pattern.compile("([a-zA-Zа-яА-Я0-9']+)").matcher(sentence.getContent());
+        Matcher matcher = Pattern.compile("([a-zA-Z^0-9]+)").matcher(sentence.getContent());
         while (matcher.find()) {
-            result = append(result, new Word(matcher.group(1)));
+            result = append(result, new Word(matcher.group(1).replaceAll("([0-9]+)","")));
         }
         sentence.setWords(result);
     }
@@ -35,5 +34,5 @@ public class EntityParser {
         return arr;
     }
 
-    
+
 }
