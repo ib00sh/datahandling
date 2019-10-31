@@ -1,7 +1,6 @@
 package com.epam.datahandling.utils;
 
-import java.io.IOException;
-
+import java.io.*;
 public class BackupUtils {
 
     /**
@@ -11,7 +10,19 @@ public class BackupUtils {
      * @throws IOException If source file is not exist
      */
     public static void backup(String src, String dest) throws IOException {
-        throw new UnsupportedOperationException("Implement this method");
+        InputStream is = null;
+        OutputStream os = null;
+        try {
+            is = new FileInputStream(src);
+            os = new FileOutputStream(dest);
+            byte[] buffer = new byte[1024];
+            int length;
+            while ((length = is.read(buffer)) > 0) {
+                os.write(buffer, 0, length);
+            }
+        } finally {
+            is.close();
+            os.close();
+        }
     }
-
 }

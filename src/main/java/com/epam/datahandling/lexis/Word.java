@@ -7,11 +7,12 @@ public class Word {
 
     private String content;
 
-    public Word(String word) {
-        throw new UnsupportedOperationException("Implement this method");
+    public Word(String word)
+    {
+        this.content = word;
     }
 
     public String getContent() {
-        throw new UnsupportedOperationException("Implement this method");
+        return content;
     }
 }
