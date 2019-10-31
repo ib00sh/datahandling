@@ -13,8 +13,8 @@ public class BackupUtils {
         InputStream is = null;
         OutputStream os = null;
         try {
-            is = new FileInputStream(src);
-            os = new FileOutputStream(dest);
+            is = new FileInputStream(new File(src));
+            os = new FileOutputStream(new File(dest));
             byte[] buffer = new byte[1024];
             int length;
             while ((length = is.read(buffer)) > 0) {

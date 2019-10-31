@@ -9,7 +9,6 @@ public class Sentence {
     private String content;
     private Word[] words;
 
-
     public Sentence(String content) {
         this.content = content;
     }
