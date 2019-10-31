@@ -24,4 +24,6 @@ public class Sentence {
     public void setWords(Word[] words){
         this.words = words;
     }
+
+
 }
